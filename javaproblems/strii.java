@@ -3,22 +3,20 @@ import java.util.*;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        String B = sc.next();
 
-        int t = sc.nextInt();
+        System.out.println(A.length() + B.length());
 
-        while(t-- > 0) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int n = sc.nextInt();
+        if(A.compareTo(B) > 0)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
 
-            int sum = a;
-
-            for(int i = 0; i < n; i++) {
-                sum += (int)Math.pow(2, i) * b;
-                System.out.print(sum + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(
+            A.substring(0,1).toUpperCase() + A.substring(1) + " " +
+            B.substring(0,1).toUpperCase() + B.substring(1)
+        );
 
         sc.close();
     }
